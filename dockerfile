@@ -2,12 +2,12 @@ FROM node:24-alpine
 
 WORKDIR /app
 
-# Copier les fichiers de configuration
 COPY package*.json ./
 
 RUN npm ci
 
-# Copier le code source
+RUN npm install -g @angular/cli
+
 COPY . .
 
 EXPOSE 4200

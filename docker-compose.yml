@@ -1,5 +1,6 @@
 services:
   angular-app:
+    container_name: dadametdev
     build: .
     ports:
       - "4200:4200"
